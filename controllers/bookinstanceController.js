@@ -146,7 +146,7 @@ exports.bookinstance_update_get = function(req, res, next) {
             return next(err);
         }
         // Success.
-        res.render('bookinstance_form', { title: 'Update BookInstance', bookinstance:bookinstance, book_list : books});
+        res.render('bookinstance_form', { title: 'Update BookInstance', bookinstance: bookinstance, book_list : books});
     });
 
 };

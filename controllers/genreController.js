@@ -145,7 +145,7 @@ exports.genre_delete_post = (req, res, next) => {
         Genre.findByIdAndRemove(req.body.genreid, function deleteGenre(err){
           if(err) {return next(err);}
           //Success - go to genre list
-          res.redirect('catalog/genres');
+          res.redirect('/catalog/genres');
         })
       }
     });
