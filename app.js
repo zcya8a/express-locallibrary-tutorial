@@ -13,7 +13,7 @@ var app = express();
 //mongoose链接mongoDB
 const mongoose = require('mongoose');
 //const mongoDB = "mongodb+srv://uniq5:kyu5@locallibrary-b5rqz.mongodb.net/local_library?retryWrites=true&w=majority";
-const mongoDB = "mongodb+srv://uniq5:kyu5@locallibrary-b5rqz.mongodb.net/local_library_en?retryWrites=true&w=majority";
+const mongoDB = process.env.MONGODB_URI || "mongodb+srv://uniq5:kyu5@locallibrary-b5rqz.mongodb.net/local_library_en?retryWrites=true&w=majority";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
